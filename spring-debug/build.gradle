@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'org.springframework'
+version '5.3.18'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    api(project(":spring-context"))
+    api(project(":spring-instrument"))
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
